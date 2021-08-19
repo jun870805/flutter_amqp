@@ -9,14 +9,18 @@ import 'package:provider/provider.dart';
 class AMQPFunction{
 
   // amqp ConnectionSettings
-  final dart_amqp.ConnectionSettings _settings = dart_amqp.ConnectionSettings(
-      host : "ip",
-      authProvider : const dart_amqp.PlainAuthenticator("account", "password")
-  );
+  late dart_amqp.ConnectionSettings _settings;
   late dart_amqp.Client _client;
   late dart_amqp.Channel _channel;
   late dart_amqp.Exchange _exchange;
   late dart_amqp.Consumer _consumer;
+
+  AMQPFunction(String ip,String account,String password){
+    _settings = dart_amqp.ConnectionSettings(
+        host : ip,
+        authProvider : dart_amqp.PlainAuthenticator(account, password)
+    );
+  }
 
   Future<void> sendMessage(message) async {
 

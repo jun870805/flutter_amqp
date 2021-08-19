@@ -16,7 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final TextEditingController _inputController = TextEditingController();
   bool receiveOnHome = false;
-  var amqpFunction = AMQPFunction();
+  var amqpFunction = AMQPFunction("ip","account","password");
 
   changeStatus(){
     setState(() {
