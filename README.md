@@ -2,9 +2,9 @@
 
 Flutter AMQP（Advanced Message Queuing Protocol）
 
-傳送及接收Message，並利用 狀態管理(provider) 同步message
+傳送及接收訊息，並利用 狀態管理(provider) 同步訊息
 
-***使用套件：[dart_amqp ^0.1.4](https://pub.dev/packages/dart_amqp/versions/0.1.4) [provider ^5.0.0](https://pub.dev/packages/provider/versions/5.0.0)***
+***使用套件：[dart_amqp ^0.1.4](https://pub.dev/packages/dart_amqp/versions/0.1.4) 、 [provider ^5.0.0](https://pub.dev/packages/provider/versions/5.0.0)***
 
 ## Step1 添加庫至 pubspec.yaml ：
 
