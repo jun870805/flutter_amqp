@@ -22,7 +22,7 @@ class AMQPFunction{
     );
   }
 
-  Future<void> sendMessage(message) async {
+  void sendMessage(message) async {
 
     // create client,channel
     dart_amqp.Client client = dart_amqp.Client(settings : _settings);
@@ -42,7 +42,7 @@ class AMQPFunction{
     await client.close();
   }
 
-  Future<void> receive(context) async {
+  void receive(context) async {
     // create client,channel
     _client = dart_amqp.Client(settings : _settings);
     _channel = await _client.channel();
@@ -72,7 +72,7 @@ class AMQPFunction{
     });
   }
 
-  Future<void> dispose()async {
+  void dispose()async {
     // close consumer
     _consumer.cancel();
 
