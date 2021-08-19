@@ -33,7 +33,7 @@ class AMQPFunction{
     //queue.publish(message);
 
     // Exchange publish message
-    dart_amqp.Exchange exchange = await channel.exchange('exchange_name',dart_amqp.ExchangeType.DIRECT );
+    dart_amqp.Exchange exchange = await channel.exchange("exchange_name",dart_amqp.ExchangeType.DIRECT );
     exchange.publish(message, "routing_key");
 
     debugPrint(" [x] Sent '$message'");
@@ -52,7 +52,7 @@ class AMQPFunction{
     //dart_amqp.Consumer consumer = await queue.consume();
 
     // Exchange receive
-    _exchange = await _channel.exchange('exchange_name',dart_amqp.ExchangeType.DIRECT );
+    _exchange = await _channel.exchange("exchange_name",dart_amqp.ExchangeType.DIRECT );
     _consumer = await _exchange.bindPrivateQueueConsumer(["routing_key"]);
 
     // listen receive message
